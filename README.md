@@ -6,13 +6,29 @@
 
 ## Install
 
+- Firstly install component via [NPM](https://www.npmjs.com/)
+
 ```bash
 npm install react-native-effects-view --save
 ```
 
+- In XCode right click on project's name and choose `Add Files to..`
+- Go to `node_modules/react-native-effects-view` and select `DVEffects` folder
+- Now you're ready to `require('react-native-effects-view')` inside your app!
+
 ## Props
 
+- `blurStyle` _(String)_ - choose one of the following:
+    - `"light"` (_default_)
+    - `"extraLight"`
+    - `"dark"`
+- `vibrantContent` _(ReactElement)_ - render vibrant content inside blurred view
+
 ## Example
+
+Clone this repo and check in XCode [`example/EffectsApp`](https://github.com/voronianski/react-native-effects-view/tree/master/example/EffectsApp) folder (don't forget to run `npm install` inside it).
+
+All children of `<EffectsView />` will be blurred, however you can position element on top of background images etc. like on example below:
 
 ```javascript
 var React = require('react-native');
@@ -23,7 +39,7 @@ var App = React.createClass({
     renderVibrant() {
         return (
             <View>
-                <Text style={styles.text}>Do you feel that blurry??</Text>
+                <Text style={styles.text}>Do you feel blurry??</Text>
             </View>
         );
     },
