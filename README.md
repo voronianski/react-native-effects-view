@@ -1,6 +1,8 @@
 # ReactNativeEffectsView
 
-> Component to make easy use of iOS8 `UIVisualEffectViews` with `UIBlurEffect` and `UIVibrancyEffect` in (ReactNative)[http://facebook.github.io/react-native].
+> Component to make easy use of iOS8 `UIVisualEffectViews` with `UIBlurEffect` and `UIVibrancyEffect` in [ReactNative](http://facebook.github.io/react-native).
+
+<img src="https://raw.githubusercontent.com/voronianski/react-native-effects-view/master/examples/UIVisualEffects.png" width="320" height="568" alt="Screenshot">
 
 ## Install
 
