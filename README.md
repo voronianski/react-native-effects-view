@@ -6,8 +6,6 @@
 
 ## Install
 
-- Firstly install component via [NPM](https://www.npmjs.com/)
-
 ```bash
 npm install react-native-effects-view --save
 ```
