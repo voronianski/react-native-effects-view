@@ -26,7 +26,7 @@ npm install react-native-effects-view --save
 
 ## Example
 
-Clone this repo and check [`example/EffectsApp`](https://github.com/voronianski/react-native-effects-view/tree/master/example/EffectsApp) folder (don't forget to run `npm install` inside it) in XCode. It contains the app presented by [screenshot](https://raw.githubusercontent.com/voronianski/react-native-effects-view/master/example/UIVisualEffects.png).
+In order to see usage example check [`example/EffectsApp`](https://github.com/voronianski/react-native-effects-view/tree/master/example/EffectsApp) folder in XCode (don't forget to run `npm install` inside). It contains the app presented by [screenshot](https://raw.githubusercontent.com/voronianski/react-native-effects-view/master/example/UIVisualEffects.png).
 
 All children of `<EffectsView />` will be blurred, however you can use it without children and position element on top of background images and other views.
 
@@ -80,6 +80,10 @@ var styles = StyleSheet.create({
 
 AppRegistry.registerComponent('App', () => App);
 ```
+
+## References
+
+Demo app is inspired by [UIVisualEffects](https://github.com/ide/UIVisualEffects) in Swift repo.
 
 ---
 
