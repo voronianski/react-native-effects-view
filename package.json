@@ -1,0 +1,20 @@
+{
+  "name": "react-native-effects-view",
+  "version": "0.1.0",
+  "description": "ReactNative Component that makes easy to use iOS8 UIVisualEffect",
+  "main": "index.ios.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "react-component",
+    "ios",
+    "blur",
+    "uiview",
+    "view"
+  ],
+  "author": "Dmitri Voronianski <dmitri.voronianski@gmail.com>",
+  "license": "MIT"
+}
