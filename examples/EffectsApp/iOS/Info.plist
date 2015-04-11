@@ -36,6 +36,8 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 </dict>

@@ -21,6 +21,8 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		2AD205251AD97BF300E97D74 /* DVEffectsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD205221AD97BF300E97D74 /* DVEffectsView.m */; };
+		2AD205261AD97BF300E97D74 /* DVEffectsViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD205241AD97BF300E97D74 /* DVEffectsViewManager.m */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +116,10 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = iOS/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = iOS/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		2AD205211AD97BF300E97D74 /* DVEffectsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVEffectsView.h; sourceTree = "<group>"; };
+		2AD205221AD97BF300E97D74 /* DVEffectsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVEffectsView.m; sourceTree = "<group>"; };
+		2AD205231AD97BF300E97D74 /* DVEffectsViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVEffectsViewManager.h; sourceTree = "<group>"; };
+		2AD205241AD97BF300E97D74 /* DVEffectsViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVEffectsViewManager.m; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,6 +223,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		2AD205201AD97BF300E97D74 /* DVEffects */ = {
+			isa = PBXGroup;
+			children = (
+				2AD205211AD97BF300E97D74 /* DVEffectsView.h */,
+				2AD205221AD97BF300E97D74 /* DVEffectsView.m */,
+				2AD205231AD97BF300E97D74 /* DVEffectsViewManager.h */,
+				2AD205241AD97BF300E97D74 /* DVEffectsViewManager.m */,
+			);
+			name = DVEffects;
+			path = "node_modules/react-native-effects-view/DVEffects";
+			sourceTree = "<group>";
+		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +271,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				2AD205201AD97BF300E97D74 /* DVEffects */,
 				13B07FAE1A68108700A75B9A /* EffectsApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -449,6 +468,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD205251AD97BF300E97D74 /* DVEffectsView.m in Sources */,
+				2AD205261AD97BF300E97D74 /* DVEffectsViewManager.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
