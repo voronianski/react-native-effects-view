@@ -2,10 +2,6 @@
  * ReactNativeEffectsView
  * http://github.com/voronianski/react-native-effects-view
  */
-/**
- * ReactNativeEffectsView
- * http://github.com/voronianski/react-native-effects-view
- */
 
 'use strict';
 
@@ -23,7 +19,7 @@ var EffectsViewComponent = React.createClass({
     mixins: [NativeMethodsMixin],
 
     propTypes: {
-        blurStyle: PropTypes.string.isRequired,
+        blurStyle: PropTypes.string,
         vibrantContent: PropTypes.node
     },
 
@@ -66,4 +62,3 @@ var styles = StyleSheet.create({
 });
 
 module.exports = EffectsViewComponent;
-
