@@ -2,7 +2,7 @@
 
 @implementation DVEffectsViewManager
 
-id RCT_EXPORT_MODULE();
+RCT_EXPORT_MODULE();
 
 - (UIView *)view
 {
