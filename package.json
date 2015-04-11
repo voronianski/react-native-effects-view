@@ -1,6 +1,6 @@
 {
   "name": "react-native-effects-view",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "ReactNative Component that makes easy to use iOS8 UIVisualEffect",
   "main": "index.ios.js",
   "scripts": {
@@ -19,6 +19,9 @@
     "uiview",
     "view"
   ],
+  "dependencies": {
+    "react-native": "^0.3.11"
+  },
   "author": "Dmitri Voronianski <dmitri.voronianski@gmail.com>",
   "license": "MIT",
   "bugs": {
