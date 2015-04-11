@@ -2,7 +2,7 @@
 
 > Component to make easy use of iOS8 `UIVisualEffectViews` with `UIBlurEffect` and `UIVibrancyEffect` in [ReactNative](http://facebook.github.io/react-native).
 
-<img src="https://raw.githubusercontent.com/voronianski/react-native-effects-view/master/examples/UIVisualEffects.png" width="320" height="568" alt="Screenshot">
+<img src="https://raw.githubusercontent.com/voronianski/react-native-effects-view/master/example/UIVisualEffects.png" width="320" height="568" alt="Screenshot">
 
 ## Install
 
@@ -22,13 +22,13 @@ npm install react-native-effects-view --save
     - `"light"` (_default_)
     - `"extraLight"`
     - `"dark"`
-- `vibrantContent` _(ReactElement)_ - render vibrant content inside blurred view
+- `vibrantContent` _(ReactElement)_ - render vibrant content inside blurred view.
 
 ## Example
 
-Clone this repo and check in XCode [`example/EffectsApp`](https://github.com/voronianski/react-native-effects-view/tree/master/example/EffectsApp) folder (don't forget to run `npm install` inside it).
+Clone this repo and check [`example/EffectsApp`](https://github.com/voronianski/react-native-effects-view/tree/master/example/EffectsApp) folder (don't forget to run `npm install` inside it) in XCode. It contains the app presented by [screenshot](https://raw.githubusercontent.com/voronianski/react-native-effects-view/master/example/UIVisualEffects.png).
 
-All children of `<EffectsView />` will be blurred, however you can position element on top of background images etc. like on example below:
+All children of `<EffectsView />` will be blurred, however you can use it without children and position element on top of background images and other views.
 
 ```javascript
 var React = require('react-native');
