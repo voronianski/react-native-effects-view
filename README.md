@@ -81,7 +81,7 @@ AppRegistry.registerComponent('App', () => App);
 
 ## References
 
-Demo app is inspired by [UIVisualEffects](https://github.com/ide/UIVisualEffects) in Swift repo.
+Demo app is inspired by [UIVisualEffects](https://github.com/ide/UIVisualEffects) repo.
 
 ---
 
