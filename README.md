@@ -22,6 +22,8 @@ npm install react-native-effects-view --save
     - `"dark"`
 - `vibrantContent` _(ReactElement)_ - render vibrant content inside blurred view.
 
+## Children
+
 All children of `<EffectsView />` will be blurred, however you can use it without children and position element on top of background images and other views.
 
 ## Example
