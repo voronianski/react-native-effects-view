@@ -20,7 +20,7 @@
     "view"
   ],
   "dependencies": {
-    "react-native": "^0.3.11"
+    "react-native": "^0.4.0"
   },
   "author": "Dmitri Voronianski <dmitri.voronianski@gmail.com>",
   "license": "MIT",
