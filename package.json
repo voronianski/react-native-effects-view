@@ -19,8 +19,8 @@
     "uiview",
     "view"
   ],
-  "dependencies": {
-    "react-native": "^0.4.x"
+  "peerDependencies": {
+    "react-native": ">=0.4.4 || 0.5.0-rc1 || 0.6.0-rc || 0.7.0-rc || 0.7.0-rc.2"
   },
   "author": "Dmitri Voronianski <dmitri.voronianski@gmail.com>",
   "license": "MIT",
