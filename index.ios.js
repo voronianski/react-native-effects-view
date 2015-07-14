@@ -7,8 +7,8 @@
 
 var React = require('react-native');
 var PropTypes = require('ReactPropTypes');
-var ReactIOSViewAttributes = require('ReactIOSViewAttributes');
-var createReactIOSNativeComponentClass = require('createReactIOSNativeComponentClass');
+var ReactNativeViewAttributes = require('ReactNativeViewAttributes');
+var createReactNativeComponentClass = require('createReactNativeComponentClass');
 var StyleSheet = require('StyleSheet');
 var NativeMethodsMixin = require('NativeMethodsMixin');
 var flattenStyle = require('flattenStyle');
@@ -24,7 +24,7 @@ var EffectsViewComponent = React.createClass({
     },
 
     viewConfig: {
-        validAttributes: ReactIOSViewAttributes.UIView,
+        validAttributes: ReactNativeViewAttributes.UIView,
         uiViewClassName: 'UIView',
     },
 
@@ -47,8 +47,8 @@ var EffectsViewComponent = React.createClass({
     }
 });
 
-var EffectsView = createReactIOSNativeComponentClass({
-    validAttributes: merge(ReactIOSViewAttributes.UIView, {
+var EffectsView = createReactNativeComponentClass({
+    validAttributes: merge(ReactNativeViewAttributes.UIView, {
         blurStyle: true,
         vibrant: true
     }),
