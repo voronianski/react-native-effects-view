@@ -7,27 +7,32 @@
 'use strict';
 
 var React = require('react-native');
-var EffectsView = require('react-native-effects-view');
 var {
     AppRegistry,
     StyleSheet,
     Text,
     View,
     Image,
-    StatusBarIOS
+    StatusBarIOS,
+    Dimensions,
 } = React;
+
+var deviceHeight = Dimensions.get('window').height;
+var deviceWidth = Dimensions.get('window').width;
+
+var EffectsView = require('react-native-effects-view');
 
 var EffectsApp = React.createClass({
     componentWillMount() {
-        StatusBarIOS.setStyle(StatusBarIOS.Style.lightContent, true);
+        StatusBarIOS.setStyle('light-content', true);
     },
 
     renderVibrantExtraLight() {
         return (
-            <View>
+            <View style={styles.blurContent}>
                 <Text style={styles.text}>Extra Light Blur</Text>
-                <Image style={styles.mask} source={require('image!ButtonRoundRect')}>
-                    <Image style={styles.camera} source={require('image!Camera')} />
+                <Image style={styles.mask} source={require('./img/ButtonRoundRect.png')}>
+                    <Image style={styles.camera} source={require('./img/Camera.png')} />
                 </Image>
             </View>
         );
@@ -35,10 +40,10 @@ var EffectsApp = React.createClass({
 
     renderVibrantLight() {
         return (
-            <View>
+            <View style={styles.blurContent}>
                 <Text style={styles.text}>Light Blur</Text>
-                <Image style={styles.mask} source={require('image!ButtonRoundRect')}>
-                    <Image style={styles.genius} source={require('image!Genius')} />
+                <Image style={styles.mask} source={require('./img/ButtonRoundRect.png')}>
+                    <Image style={styles.genius} source={require('./img/Genius.png')} />
                 </Image>
             </View>
         );
@@ -46,10 +51,10 @@ var EffectsApp = React.createClass({
 
     renderVibrantDark() {
         return (
-            <View>
+            <View style={styles.blurContent}>
                 <Text style={styles.text}>Dark Blur</Text>
-                <Image style={styles.mask} source={require('image!ButtonRoundRect')}>
-                    <Image style={styles.bitcoin} source={require('image!Bitcoin')} />
+                <Image style={styles.mask} source={require('./img/ButtonRoundRect.png')}>
+                    <Image style={styles.bitcoin} source={require('./img/Bitcoin.png')} />
                 </Image>
             </View>
         );
@@ -58,25 +63,24 @@ var EffectsApp = React.createClass({
     render() {
         return (
             <View style={styles.page}>
-                <Image style={styles.bg} source={require('image!Yosemite')}>
-                    <View style={styles.container}>
-                        <EffectsView
-                            style={[styles.blur, styles.extraLightBlur]}
-                            blurStyle="extraLight"
-                            vibrantContent={this.renderVibrantExtraLight()}
-                        />
-                        <EffectsView
-                            style={[styles.blur, styles.lightBlur]}
-                            blurStyle="light"
-                            vibrantContent={this.renderVibrantLight()}
-                        />
-                        <EffectsView
-                            style={[styles.blur, styles.darkBlur]}
-                            blurStyle="dark"
-                            vibrantContent={this.renderVibrantDark()}
-                        />
-                    </View>
-                </Image>
+                <Image style={styles.bg} source={require('./img/Yosemite.png')} />
+                <View style={styles.container}>
+                    <EffectsView
+                        style={styles.blur}
+                        blurStyle="extraLight"
+                        vibrantContent={this.renderVibrantExtraLight()}
+                    />
+                    <EffectsView
+                        style={styles.blur}
+                        blurStyle="light"
+                        vibrantContent={this.renderVibrantLight()}
+                    />
+                    <EffectsView
+                        style={styles.blur}
+                        blurStyle="dark"
+                        vibrantContent={this.renderVibrantDark()}
+                    />
+                </View>
             </View>
         );
     }
@@ -91,29 +95,26 @@ var styles = StyleSheet.create({
         flex: 1,
         position: 'absolute',
         top: 0,
-        left: 0,
+        left: -2200,
         right: 0,
         bottom: -100
     },
     container: {
-        flex: 1
+        position: 'absolute',
+        top: 20,
+        right: 0,
+        bottom: 0,
+        left: 0,
     },
     blur: {
-        flex: 1,
-        height: 140,
-        alignSelf: 'stretch',
-        position: 'absolute',
-        left: 0,
-        right: 0
+        height: ( deviceHeight - 20 ) / 3,
+        alignItems: 'center',
+        flexDirection: 'row',
     },
-    extraLightBlur: {
-        bottom: 380
-    },
-    lightBlur: {
-        bottom: 240
-    },
-    darkBlur: {
-        bottom: 100
+    blurContent: {
+        flexDirection: 'column',
+        alignItems: 'center',
+        width: deviceWidth,
     },
     text: {
         fontSize: 16,
@@ -136,10 +137,10 @@ var styles = StyleSheet.create({
         width: 64,
         height: 64,
         flex: 1,
-        alignSelf: 'center',
+        // alignSelf: 'center',
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 10
+        marginTop: 10,
     }
 });
 

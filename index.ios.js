@@ -6,25 +6,27 @@
 'use strict';
 
 var React = require('react-native');
-var PropTypes = require('ReactPropTypes');
-var ReactIOSViewAttributes = require('ReactIOSViewAttributes');
-var createReactIOSNativeComponentClass = require('createReactIOSNativeComponentClass');
-var StyleSheet = require('StyleSheet');
-var NativeMethodsMixin = require('NativeMethodsMixin');
-var flattenStyle = require('flattenStyle');
-var merge = require('merge');
-var { View } = React;
+var ReactNativeViewAttributes = require('react-native/Libraries/Components/View/ReactNativeViewAttributes');
+var createReactNativeComponentClass = require('react-native/Libraries/ReactNative/createReactNativeComponentClass');
+var NativeMethodsMixin = require('react-native/Libraries/ReactIOS/NativeMethodsMixin');
+var flattenStyle = require('react-native/Libraries/StyleSheet/flattenStyle');
+var merge = require('react-native/Libraries/Utilities/mergeFast');
+var {
+    View,
+    PropTypes,
+    StyleSheet,
+} = React;
 
 var EffectsViewComponent = React.createClass({
     mixins: [NativeMethodsMixin],
 
     propTypes: {
         blurStyle: PropTypes.string,
-        vibrantContent: PropTypes.node
+        vibrantContent: PropTypes.node,
     },
 
     viewConfig: {
-        validAttributes: ReactIOSViewAttributes.UIView,
+        validAttributes: ReactNativeViewAttributes.UIView,
         uiViewClassName: 'UIView',
     },
 
@@ -47,8 +49,8 @@ var EffectsViewComponent = React.createClass({
     }
 });
 
-var EffectsView = createReactIOSNativeComponentClass({
-    validAttributes: merge(ReactIOSViewAttributes.UIView, {
+var EffectsView = createReactNativeComponentClass({
+    validAttributes: merge(ReactNativeViewAttributes.UIView, {
         blurStyle: true,
         vibrant: true
     }),
