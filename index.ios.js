@@ -6,21 +6,20 @@
 'use strict';
 
 var React = require('react-native');
-var PropTypes = require('ReactPropTypes');
 var ReactNativeViewAttributes = require('ReactNativeViewAttributes');
 var createReactNativeComponentClass = require('createReactNativeComponentClass');
 var StyleSheet = require('StyleSheet');
 var NativeMethodsMixin = require('NativeMethodsMixin');
 var flattenStyle = require('flattenStyle');
 var merge = require('merge');
-var { View } = React;
+var { View, PropTypes, } = React;
 
 var EffectsViewComponent = React.createClass({
     mixins: [NativeMethodsMixin],
 
     propTypes: {
         blurStyle: PropTypes.string,
-        vibrantContent: PropTypes.node
+        vibrantContent: PropTypes.node,
     },
 
     viewConfig: {
