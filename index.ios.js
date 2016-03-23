@@ -43,7 +43,7 @@ var EffectsViewComponent = React.createClass({
         return (
             <EffectsView {...nativeProps}>
                 {vibrantNode}
-                {React.Children.map(children, React.addons.cloneWithProps)}
+                {children}
             </EffectsView>
         );
     }
