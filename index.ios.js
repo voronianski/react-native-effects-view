@@ -5,17 +5,18 @@
 
 'use strict';
 
-var React = require('react-native');
-var ReactNativeViewAttributes = require('react-native/Libraries/Components/View/ReactNativeViewAttributes');
-var createReactNativeComponentClass = require('react-native/Libraries/ReactNative/createReactNativeComponentClass');
-var NativeMethodsMixin = require('react-native/Libraries/ReactIOS/NativeMethodsMixin');
-var flattenStyle = require('react-native/Libraries/StyleSheet/flattenStyle');
-var merge = require('react-native/Libraries/Utilities/mergeFast');
-var {
+import React, { Component } from 'react';
+
+import {
     View,
     PropTypes,
     StyleSheet,
-} = React;
+    ReactNativeViewAttributes,
+    createReactNativeComponentClass,
+    NativeMethodsMixin,
+    flattenStyle,
+    merge
+} from 'react-native';
 
 var EffectsViewComponent = React.createClass({
     mixins: [NativeMethodsMixin],
