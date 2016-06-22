@@ -26,7 +26,7 @@
     "view"
   ],
   "peerDependencies": {
-    "react-native": ">=0.28.0"
+    "react-native": ">=0.25.1"
   },
   "author": "Dmitri Voronianski <dmitri.voronianski@gmail.com>",
   "license": "MIT",
