@@ -5,60 +5,41 @@
 
 'use strict';
 
-import React, { Component } from 'react';
+import React from 'react';
 
 import {
     View,
-    PropTypes,
     StyleSheet,
-    ReactNativeViewAttributes,
-    createReactNativeComponentClass,
-    NativeMethodsMixin,
-    flattenStyle,
-    merge
+    requireNativeComponent,
 } from 'react-native';
 
-var EffectsViewComponent = React.createClass({
-    mixins: [NativeMethodsMixin],
 
-    propTypes: {
-        blurStyle: PropTypes.string,
-        vibrantContent: PropTypes.node,
-    },
+const EffectsViewComponent = (props) => {
+    const { children, vibrantContent } = props;
+    const vibrantNode = vibrantContent ? vibrantContent : <View />;
+    const {style, ...nativeProps} = props;
+    return (
+        <EffectsView {...nativeProps} style={styles.base, style}>
+            {vibrantNode}
+            {children}
+        </EffectsView>
+    );
+};
 
-    viewConfig: {
-        validAttributes: ReactNativeViewAttributes.UIView,
-        uiViewClassName: 'UIView',
-    },
+EffectsViewComponent.defaultProps = {
+    vibrant: true,
+    blurStyle: true,
+};
 
-    render() {
-        var { children, vibrantContent } = this.props;
-        var style = flattenStyle([styles.base, this.props.style]);
-        var nativeProps = merge(this.props, { style });
+EffectsViewComponent.propTypes = {
+    vibrant: React.PropTypes.bool,
+    blurStyle: React.PropTypes.string,
+    vibrantContent: React.PropTypes.node
+};
 
-        if (vibrantContent) {
-            nativeProps.vibrant = true;
-        }
-        var vibrantNode = vibrantContent ? vibrantContent : <View />;
+const EffectsView = requireNativeComponent('DVEffectsView', EffectsViewComponent);
 
-        return (
-            <EffectsView {...nativeProps}>
-                {vibrantNode}
-                {children}
-            </EffectsView>
-        );
-    }
-});
-
-var EffectsView = createReactNativeComponentClass({
-    validAttributes: merge(ReactNativeViewAttributes.UIView, {
-        blurStyle: true,
-        vibrant: true
-    }),
-    uiViewClassName: 'DVEffectsView'
-});
-
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
     base: {
         backgroundColor: 'transparent'
     }
