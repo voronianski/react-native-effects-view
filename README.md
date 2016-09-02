@@ -1,7 +1,6 @@
 # ReactNativeEffectsView
 
 [![npm version](http://badge.fury.io/js/react-native-effects-view.svg)](http://badge.fury.io/js/react-native-effects-view)
-[![Download Count](http://img.shields.io/npm/dm/react-native-effects-view.svg?style=flat)](http://www.npmjs.com/package/react-native-effects-view)
 
 > Component to make easy use of iOS8 `UIVisualEffectViews` with `UIBlurEffect` and `UIVibrancyEffect` in [ReactNative](http://facebook.github.io/react-native).
 
