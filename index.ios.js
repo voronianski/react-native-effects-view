@@ -6,6 +6,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
     View,
@@ -32,9 +33,9 @@ EffectsViewComponent.defaultProps = {
 };
 
 EffectsViewComponent.propTypes = {
-    vibrant: React.PropTypes.bool,
-    blurStyle: React.PropTypes.string,
-    vibrantContent: React.PropTypes.node
+    vibrant: PropTypes.bool,
+    blurStyle: PropTypes.string,
+    vibrantContent: PropTypes.node
 };
 
 const EffectsView = requireNativeComponent('DVEffectsView', EffectsViewComponent);

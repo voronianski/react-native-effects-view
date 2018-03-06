@@ -33,5 +33,8 @@
   "bugs": {
     "url": "https://github.com/voronianski/react-native-effects-view/issues"
   },
-  "homepage": "https://github.com/voronianski/react-native-effects-view"
+  "homepage": "https://github.com/voronianski/react-native-effects-view",
+  "dependencies": {
+    "prop-types": "^15.6.0"
+  }
 }
