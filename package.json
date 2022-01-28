@@ -1,6 +1,6 @@
 {
   "name": "react-native-effects-view",
-  "version": "0.4.0",
+  "version": "0.4.01",
   "description": "ReactNative Component that makes easy to use iOS8 UIVisualEffect",
   "main": "index.ios.js",
   "scripts": {
