@@ -13,7 +13,7 @@ var {
     Text,
     View,
     Image,
-    StatusBarIOS,
+    StatusBar,
     Dimensions,
 } = React;
 
@@ -24,7 +24,7 @@ var EffectsView = require('react-native-effects-view');
 
 var EffectsApp = React.createClass({
     componentWillMount() {
-        StatusBarIOS.setStyle('light-content', true);
+        StatusBar.setStyle('light-content', true);
     },
 
     renderVibrantExtraLight() {
